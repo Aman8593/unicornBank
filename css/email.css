@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url("../images/mainBG.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0; /* Reset default margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wrapper styling */
+.wrapper{
+    width: 550px;
+    height: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+/* email msg header */
+.email-msg-header{
+    text-align: center;
+}
+
+/* company name */
+.company-name{
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    color: #5a47cd;
+}
+
+/* welcome text */
+.welcome-text{
+    text-align: center;
+}
+
+/* verify acc btn */
+.verify-acc-btn{
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0px 3px 6px #c75df7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* copy right wrapper */
+.copy-right{
+    padding: 25px;
+    color: gainsboro;
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
