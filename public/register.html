@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Unicorn Bank</title>
+    <!-- Linking bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <!-- Linking fontawesome css file -->
+    <link rel="stylesheet" href="css/fontawesome/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Linking the default.css file -->
+    <link rel="stylesheet" href="css/default.css">
+    <!-- Linking Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body class="justify-content-center">
+    <!-- Navigation Bar -->
+    <header class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center logo">
+            <img src="images/logo.png" alt="Site Logo" class="logo" />
+            <div class="site-name">
+                Unicorn Bank
+            </div>
+        </div>
+        <nav class="navbar navbar-light" style="background-color: transparent;">
+            <ul class="navbar">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="information.html">More Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- end of Navigation Bar -->
+    <!-- Information card -->
+    <div class="d-flex justify-content-center align-items-center card col-7 bg-transparent text-white info-card">
+        Our dedicated team of agents is ready to assist you every step of the way. Soon, one of our agents will reach out to guide and support you in creating your account at our bank. <br>
+        Thank you for choosing us! We look forward to serving you and providing a seamless banking experience.
+    </div>
+    <!-- end of Information card -->
+    <!-- Registration card -->
+    <div class="d-flex justify-content-center align-items-center card registration-form-card col-6 bg-transparent border-0">
+        <!-- Card body -->
+        <div class="reg-card-body">
+            <!-- Reg heading -->
+            <h1 class="form-header card-title mb-3">
+                <i class="fa fa-edit"></i> Register
+            </h1>
+            <!-- end of Reg heading -->
+            <!-- Form -->
+            <form id="registerForm" class="reg-form">
+                <div class="row">
+                    <div class="form-group col">
+                        <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group col">
+                        <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group col mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group col">
+                    <input type="tel" name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group col">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group col">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>            
+            <!-- Form -->
+            <!-- Already have an account card -->
+            <p class="acc-card-text my-2">
+                Already have an account?<span class="ms-2 login-link"><a href="login.html">Login</a></span> here!
+            </p>
+            <!-- Already have an account card -->
+        </div>
+        <!-- end of Card body -->
+    </div>
+    <!-- end of Registration card -->
+    <!-- Footer -->
+    <footer>Copyright &copy; 2024 <br>Made by: Eamin Khan & Aman Wadgaonkar</footer>
+    <!-- end of Footer -->
+    <!-- Linking jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Adding custom script to handle form submission -->
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Registration done successfully');
+                    window.location.href = 'login.html';
+                } else {
+                    const errorData = await response.json();
+                    alert('Error: ' + errorData.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

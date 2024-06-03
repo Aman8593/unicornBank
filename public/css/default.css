@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Main body styling */
+body{
+    height: 100vh;
+    background-image: url("../images/mainBG.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0; /* Reset default margin */
+}
+
+/* Main page Intro card styles */
+#intro-card{
+    margin: 0px 0px 0px 100px;
+    font-family: "Mulish", sans-serif;
+    color: white;
+    padding-top: 30px;
+}
+
+#intro-card h5{
+    font-size: 45px;
+}
+
+#intro-card p{
+    font-size: 14px;
+    font-family: "Mulish", sans-serif;
+}
+
+.button-wrapper a{
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0px 3px 6px #29e2f8;
+    font-weight: bold;
+}
+
+.button-wrapper a:hover{
+    font-size: 20px;
+}
+
+.register{
+    margin-right: 10px;
+    background-color: #fff;
+    /* border: 1px solid #29e2f8; */
+}
+
+.login{
+    background-color: transparent;
+    color: #fff;
+    /* border: 1px solid #543800; */
+}
+
+/* Navigation bar styles */
+header{
+    font-family: "Mulish", sans-serif;
+    padding: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    color: #fff;
+    /* margin: 0px 20px 20px 20px; */
+}
+.site-name{
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+.logo {
+    height: 40px;
+}
+/* .navbar {
+    margin-bottom: 20px; /* Add margin at bottom to separate from the content
+} */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.navbar li {
+    float: left;
+}
+.navbar li a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar li a:hover{
+    font-size: 18px;
+    color: #e95efd;
+}
+/* Footer styling */
+footer {
+    color: white;
+    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Information card */
+.info-card{
+    margin: 0px 0px 30px 100px;
+}
+
+/* Registeration form */
+.reg-card-body{
+    color: #fff;
+}
+
+.card{
+    font-family: "Mulish", sans-serif;
+}
+
+.card .form-control{
+    margin: 10px 0px;
+    box-shadow: 0px 3px 6px #9ec791;
+}
+
+.card button{
+    width: 200px;
+    margin: 10px 0px;
+    color: white;
+    background-color: #2d1c5f;
+    box-shadow: 0px 3px 6px #9ec791;
+}
+
+.login-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.login-link a{
+    text-decoration: none;
+    color: #607fdc;
+    font-weight: bold;
+}
+
+.login-link a:hover{
+    color: #c75df7;
+    font-size: 18px;
+}
