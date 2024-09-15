@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <!-- Linking bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <!-- Linking fontawsome css file -->
+    <link rel="stylesheet" href="css/fontawsome/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Styling -->
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Mulish", sans-serif;
+        }
+        body{
+            height: 100vh;
+            background-image: url("images/mainBG.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0; /* Reset default margin */
+        }
+        .card .card-text{
+            font-size: 16px;
+        }
+        .card{
+            margin: 10px 0px;
+            box-shadow: 0px 3px 6px #d1cfe5;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <!-- Error card -->
+    <div class="card col-r alert alert-danger border border-danger text-danger">
+        <h3 class="card-title">
+            <i class="fa fa-window-close"></i> Error:
+        </h3>
+        <hr>
+        <!-- Card body -->
+        <div class="card-body">
+            <p class="card-text">
+                Oops! Invalid login credentials. Please try again.
+            </p>
+        </div>
+        <!-- end of Card body -->
+        <!-- back button -->
+        <a href="login.html" class="btn btn-sm btn-danger">
+            <i class="fa fa-arrow-alt-circle-left me-1"></i>Back
+        </a>
+    </div>
+    <!-- end of Error card -->
+</body>
+</html>

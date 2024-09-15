@@ -1,0 +1,19 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "Unicorn bank is a simple cloud based secure banking website.  Technologies involved are: HTML, CSS, Bootstrap, and Fontawsome.   This website is currently under development.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.13"
+  }
+}
